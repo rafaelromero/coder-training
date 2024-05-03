@@ -10,6 +10,9 @@ def do_something_else():
 def main():
     print("Hello World")
 
+def my_function():
+
+    print(content)
 
 if __name__ == "__main__":  
     main()

@@ -5,7 +5,7 @@ import pyfiglet
 
 def main():
     message = pyfiglet.figlet_format("HELLO WORLD")
-    print(message)
+   
 
 
 
