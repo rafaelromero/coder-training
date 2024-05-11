@@ -1,18 +1,9 @@
 
 import sys
 
-def do_something():
-    print("Doing something")
+if __name__ == "__main__":
+    list = ["apple", "banana", "cherry"]
+    print(list[0],"\n",list[1], "\n",list[2])
 
-def do_something_else():
-    print("Doing something else")
 
-def main():
-    print("Hello World")
 
-def my_function():
-
-    print(content)
-
-if __name__ == "__main__":  
-    main()
