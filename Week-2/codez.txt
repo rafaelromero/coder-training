@@ -3,3 +3,8 @@
 <script src="app.js"></script>
 
 
+<fieldset class="flex two">
+                <label><input type="text" id="name" placeholder="movie name"></label>
+                <label><input type="text" id="year" placeholder="year"></label>
+                <label><input type="text" id="rating" placeholder="rating"><label>
+            </fieldset>
