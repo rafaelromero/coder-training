@@ -8,3 +8,19 @@
                 <label><input type="text" id="year" placeholder="year"></label>
                 <label><input type="text" id="rating" placeholder="rating"><label>
             </fieldset>
+
+
+
+
+
+<table class="primary" id="movies">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Year</th>
+                    <th>Rating</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
