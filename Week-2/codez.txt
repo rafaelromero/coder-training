@@ -50,4 +50,45 @@
 
 
 
+function GetMovies(){
+    fetch('http://localhost:5000/movies', {
+        method: "GET",
+        headers:{
+            'Content-Type': 'application/json'
+        }
+        
+    }).then(function(response){
+        return response.json();
+    })
+    .then((json) => { 
+        movies = json.movies;
 
+        ClearTable();
+        CreateMovieRows(movies);
+    }
+
+    );
+}
+
+
+function CreateMovieRows(movies){
+    movies.forEach(movie => {
+        var table = document.getElementById('movies');
+        var row = table.insertRow();
+        var nameCell = row.insertCell(0);
+        var yearCell = row.insertCell(1);
+        var ratingCell = row.insertCell(2);
+        nameCell.innerHTML = movie.name;
+        yearCell.innerHTML = movie.year;
+        ratingCell.innerHTML = movie.rating;
+    });
+}
+
+
+function ClearTable(){
+    var table = document.getElementById('movies');
+    var rowCount = table.rows.length;
+    for (var i = rowCount - 1; i > 0; i--) {
+        table.deleteRow(i);
+    }
+}
