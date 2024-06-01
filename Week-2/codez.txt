@@ -133,3 +133,14 @@ def get_movies():
         for row in reader:
             movies.append(row)
     return jsonify({'movies':movies})
+
+
+=======
+SQL Examples:
+
+INSERT INTO movies (name, rating, year) values('star wars', 10, 1979)
+INSERT INTO lead_actors (movie, actor) Values('star wars', 'Mark Hammel')
+INSERT INTO lead_actors (movie, actor) Values('bad boys', 'Will Smith')
+INSERT INTO lead_actors (movie, actor) Values('bad boys', 'Martin Lawrence')
+select * from movies where year = 2000
+
