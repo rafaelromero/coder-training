@@ -134,6 +134,12 @@ def movies():
         return movies
 
 
+@app.route("/users", methods=["GET"])
+def get_users():
+    users = ["David", "Daniel"]
+    return jsonify({'users': users})
+
+
 def insert_movie(name, year, rating):
     with open("data.csv", "a") as f:
         writer = csv.writer(f)
