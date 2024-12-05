@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Fruit List</h1>
+        <button id="fetchFruits" class="btn btn-primary mt-3">Fetch Fruits</button>
+        <ul id="fruitList" class="list-group mt-3"></ul>
+    </div>
+
+    <script>
+        document.getElementById('fetchFruits').addEventListener('click', function() {
+            fetch('http://localhost:5000/fruits')
+                .then(response => response.json())
+                .then(data => {
+                    const fruitList = document.getElementById('fruitList');
+                    fruitList.innerHTML = '';
+                    data.forEach(fruit => {
+                        const li = document.createElement('li');
+                        li.textContent = fruit;
+                        li.classList.add('list-group-item');
+                        fruitList.appendChild(li);
+                    });
+                })
+                .catch(error => console.error('Error fetching fruits:', error));
+        });
+    </script>
+</body>
+</html>
