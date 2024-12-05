@@ -20,9 +20,12 @@ def main():
         current_loop += 1
    print("\n")
    
-   list = ["apple", "banana", "cherry"]
+   list = ["apple", "banana", "cherry", "zebra-cakes"]
 
    print(list[0])
+   print(list[1])
+   print(list[2])
+   print(list[3])
 
    print("\n")
 
@@ -31,6 +34,3 @@ def main():
 
 if __name__ == "__main__":  
     main()
-
-
-
